@@ -1,19 +1,11 @@
-meld: Meld 1.1.1 (2005-10-26)
+meld: Meld 1.1.2 (2005-11-09) Diff and merge tool
 meld:
-meld: Diff and merge tool
+meld: With meld you can compare two or three files and edit them in place
+meld: (diffs update dynamically). You can compare two or three folders and
+meld: launch file comparisons. You can browse and view a working copy from
+meld: popular version control systems such such as CVS, Subversion,
+meld: Bazaar-ng and Mercurial. Meld is easy to use with its seamless
+meld: navigation.
 meld:
-meld: Meld is a visual diff and merge tool. It integrates especially well with
-meld: CVS. The diff viewer lets you edit files in place (diffs update
-meld: dynamically), and a middle column shows detailed changes and allows
-meld: merges. The margins show location of changes for easy navigation, and it
-meld: also features a tabbed interface that allows you to open many diffs at
-meld: once.
-meld:
-meld: Meld is written in Pyton (http://www.pyton.org) so you will need a
-meld: Pyton interpreter, Gnome-pyton, PyGTK and Gnome libraries.
-meld:
-meld:
-meld: ---
 meld: Packager: Georgi D. Sotirov <gdsotirov@dir.bg>
-meld: Packaged: 2005-11-03 21:09
 meld:
