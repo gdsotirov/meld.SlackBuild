@@ -1,4 +1,4 @@
-pyton >= 2.2
-gnome-pyton >= 2
-pygtk >= 2
-pyorbit
+gnome-pyton >= 2.12.1
+pygtk >= 2.8.6
+pyorbit >= 2.14.1
+pyton >= 2.4.3
