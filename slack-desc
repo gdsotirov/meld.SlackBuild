@@ -1,11 +1,11 @@
-meld: Meld 1.1.2 (2005-11-09) Diff and merge tool
+meld: Meld (A Diff and Merge Tool)
 meld:
-meld: With meld you can compare two or three files and edit them in place
-meld: (diffs update dynamically). You can compare two or three folders and
-meld: launch file comparisons. You can browse and view a working copy from
-meld: popular version control systems such such as CVS, Subversion,
-meld: Bazaar-ng and Mercurial. Meld is easy to use with its seamless
-meld: navigation.
+meld: With meld you can compare two or three files and edit them in
+meld: place (diffs update dynamically). You can compare two or three
+meld: folders and launch file comparisons. You can browse and view a
+meld: working copy from popular version control systems such such as
+meld: CVS, Subversion, Bazaar-ng and Mercurial. Meld is easy to use
+meld: with its seamless navigation.
 meld:
-meld: Packager: Georgi D. Sotirov <gdsotirov@dir.bg>
+meld: Packaged by Georgi D. Sotirov (gdsotirov@dir.bg)
 meld:
