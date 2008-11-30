@@ -1,11 +1,11 @@
 meld: Meld (A Diff and Merge Tool)
 meld:
-meld: With meld you can compare two or three files and edit them in
-meld: place (diffs update dynamically). You can compare two or three
-meld: folders and launch file comparisons. You can browse and view a
+meld: With Meld you can compare two or three files and edit them in
+meld: place (diffs update dynamically).  You can compare two or three
+meld: folders and launch file comparisons.  You can browse and view a
 meld: working copy from popular version control systems such such as
 meld: CVS, Subversion, Bazaar-ng and Mercurial. Meld is easy to use
 meld: with its seamless navigation.
+meld: Note: You may require package from Gnome SlackBuild project.
 meld:
 meld: Packaged by Georgi D. Sotirov (gdsotirov@dir.bg)
-meld:
