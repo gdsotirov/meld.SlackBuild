@@ -1,4 +1,15 @@
+gconf >= 2.22
 gnome-pyton >= 2.12.1
-pygtk >= 2.8.6
+gnome-vfs >= 2.22
+glib2 >= 2.14.6
+gtk+2 >= 2.12.9
+libbonobo >= 2.22
+libbonoboui >= 2.22
+libgnome >= 2.22
+libgnomecanvas >= 2.20.1.1
+libgnomeui >= 2.22
+orbit2 >= 2.14.12
+openssl-solibs >= 0.9.8h | openssl >= 0.9.8h
+pygtk >= 2.12.1
 pyorbit >= 2.14.1
-pyton >= 2.4.3
+pyton >= 2.5
