@@ -1,0 +1,7 @@
+gnome-doc-utils >= 0.12.2
+gtksourceview2 >= 2.2
+libgnomeprint >= 2.18.4
+libgnomeprintui >= 2.18.2
+libgnomecups >= 0.2.3
+pygtksourceview >= 2.2
+yelp >= 2.22
