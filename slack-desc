@@ -6,6 +6,6 @@ meld: folders and launch file comparisons.  You can browse and view a
 meld: working copy from popular version control systems such such as
 meld: CVS, Subversion, Bazaar-ng and Mercurial. Meld is easy to use
 meld: with its seamless navigation.
-meld: Note: You may require package from Gnome SlackBuild project.
-meld:
+meld: Note: You may need packages from Gnome SlackBuild project at
+meld: http://gnomeslackbuild.org/ - see the requirements for details.
 meld: Packaged by Georgi D. Sotirov (gdsotirov@dir.bg)
