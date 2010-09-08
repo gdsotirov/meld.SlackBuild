@@ -2,12 +2,13 @@
 #
 # SlackBuild for Meld
 # Written by Georgi D. Sotirov <gdsotirov@dir.bg>
+# Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
 
 . ../slack-package.conf
 
 NAME=meld
-VERSION=1.3.2
+VERSION=1.3.3
 BUILD=${BUILD:-1}
 ARCH=noarch
 
@@ -34,7 +35,6 @@ mkdir -p $PKG
 # Extract the source
 cd $TMP
 tar -xvf $CWD/$NAME-$VERSION.tar.bz2 || exit 1
-SRC=$TMP/$NAME-$VERSION
 cd $SRC
 fix_source
 
