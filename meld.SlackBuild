@@ -8,7 +8,7 @@
 . ../slack-package.conf
 
 NAME=meld
-VERSION=1.3.3
+VERSION=1.4.0
 BUILD=${BUILD:-1}
 ARCH=noarch
 
