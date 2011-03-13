@@ -1,5 +1,5 @@
 gnome-doc-utils >= 0.20.1
-gtksourceview >= 2.10.4
-pygtksourceview >= 2.10.1
+gtksourceview >= 2.4
+pygtksourceview >= 2.4
 scrollkeeper >= 0.3.14
 yelp >= 2.30.1
