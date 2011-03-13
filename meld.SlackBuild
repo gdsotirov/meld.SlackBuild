@@ -19,7 +19,7 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: meld.SlackBuild,v 1.6 2011/03/13 09:15:05 gsotirov Exp $
+# $Id: meld.SlackBuild,v 1.7 2011/03/13 09:29:55 gsotirov Exp $
 #
 
 . ../slack-package.conf
@@ -66,9 +66,14 @@ make \
   localstatedir=/var \
   install || exit 3
 
+# Install man page separatelly
+install -d -m 755 $PKG/usr/man/man1
+install -m 644 $SRC/$NAME.1 $PKG/usr/man/man1/$NAME.1
+
 # Prepare
 bin_perms $PKG
 ( cd $PKG; strip_bin; strip_lib )
+gzip_man $PKG
 ( cd $SRC; create_docs $PKG $NAME-$VERSION )
 
 mkdir -p $PKG/install
