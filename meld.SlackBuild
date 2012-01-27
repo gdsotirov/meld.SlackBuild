@@ -19,13 +19,13 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: meld.SlackBuild,v 1.9 2011/07/24 08:55:43 gsotirov Exp $
+# $Id: meld.SlackBuild,v 1.10 2012/01/27 13:19:16 gsotirov Exp $
 #
 
-. ../slack-package.conf
+. ../../slack-package.conf
 
 NAME=meld
-VERSION=1.5.2
+VERSION=1.5.3
 BUILD=${BUILD:-1}
 ARCH=noarch
 
@@ -51,7 +51,7 @@ mkdir -p $PKG
 
 # Extract the source
 cd $TMP
-tar -xvf $CWD/$NAME-$VERSION.tar.bz2 || exit 1
+tar -xvf $CWD/$NAME-$VERSION.tar.?z* || exit 1
 cd $SRC
 fix_source
 
