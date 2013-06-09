@@ -19,13 +19,13 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: meld.SlackBuild,v 1.12 2012/05/05 13:38:24 gsotirov Exp $
+# $Id: meld.SlackBuild,v 1.13 2013/06/09 10:50:26 gsotirov Exp $
 #
 
 . ../../slack-package.conf
 
 NAME=meld
-VERSION=1.6.0
+VERSION=1.6.1
 BUILD=${BUILD:-1}
 ARCH=noarch
 
