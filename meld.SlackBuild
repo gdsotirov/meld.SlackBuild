@@ -4,10 +4,10 @@
 # Written by Georgi D. Sotirov <gdsotirov@dir.bg>
 #
 
-. /etc/slack-package.conf
+. ../slack-package.conf
 
 NAME=meld
-VERSION=1.1.4
+VERSION=1.1.5.1
 BUILD=1
 ARCH=noarch
 
