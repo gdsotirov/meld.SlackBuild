@@ -4,7 +4,6 @@ gnome-pyton >= 2.28.1
 glib2 >= 2.30.2
 gtk+2 >= 2.24.4
 libgnomecanvas >= 2.30.3
-openssl-solibs >= 0.9.8za | openssl >= 0.9.8za
 patch >= 2.7
 pygtk >= 2.20.0
 pygobject >= 2.28.6
