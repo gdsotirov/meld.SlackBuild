@@ -1,10 +1,9 @@
-GConf >= 3.2.3
-bash >= 4.1.010
+GConf >= 3.2.5
+bash >= 4.2.037
 gnome-pyton >= 2.28.1
-glib2 >= 2.30.2
-gtk+2 >= 2.24.4
-libgnomecanvas >= 2.30.3
+glib2 >= 2.32.4
+gtk+2 >= 2.24.10
 patch >= 2.7
-pygtk >= 2.20.0
+pygtk >= 2.24.0
 pygobject >= 2.28.6
-pyton >= 2.6
+pyton >= 2.7
