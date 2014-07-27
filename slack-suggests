@@ -1,8 +1,8 @@
 bzr >= 2.6.0
 cvs >= 1.11.23
-git >= 1.7.12.1
+git >= 1.8.4
 gtksourceview >= 3.2.3
-mercurial >= 2.2.2
+mercurial >= 2.7.2
 pygtksourceview >= 2.10.1
 scrollkeeper >= 0.3.14
 subversion >= 1.7.16
