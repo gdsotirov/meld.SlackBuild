@@ -1,5 +1,9 @@
-gnome-doc-utils >= 0.20.1
-gtksourceview >= 2.4
-pygtksourceview >= 2.4
+bzr >= 2.5.1
+cvs >= 1.11.23
+git >= 1.7.4.4
+gtksourceview >= 3.2.3
+mercurial >= 1.8.2
+pygtksourceview >= 2.10.1
 scrollkeeper >= 0.3.14
-yelp >= 2.30.1
+subversion >= 1.6.21
+yelp >= 3.2.1
