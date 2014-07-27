@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Slackware build script for Meld Diff and merge tool
-# Copyright (C) 2007,2008,2010,2011 Georgi D. Sotirov <gdsotirov@dir.bg>
+# Copyright (C) 2005-2009,2010-2014 Georgi D. Sotirov <gdsotirov@dir.bg>
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -19,7 +19,7 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: meld.SlackBuild,v 1.13 2013/06/09 10:50:26 gsotirov Exp $
+# $Id: meld.SlackBuild,v 1.14 2014/07/27 14:18:58 gsotirov Exp $
 #
 
 . ../../slack-package.conf
