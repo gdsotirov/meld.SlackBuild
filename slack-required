@@ -1,8 +1,7 @@
-GConf >= 3.2.5
-bash >= 4.2.037
-gnome-pyton >= 2.28.1
-glib2 >= 2.32.4
-gtk+2 >= 2.24.10
+GConf >= 3.2.6
+bash >= 4.2.045
+glib2 >= 2.36.4
+gtk+2 >= 2.24.20
 patch >= 2.7
 pygtk >= 2.24.0
 pygobject >= 2.28.6
