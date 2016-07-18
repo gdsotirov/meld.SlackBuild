@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Slackware build script for Meld Diff and merge tool
-# Copyright (C) 2005-2009,2010-2014 Georgi D. Sotirov <gdsotirov@dir.bg>
+# Copyright (C) 2005-2016 Georgi D. Sotirov <gdsotirov@dir.bg>
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -19,13 +19,13 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: meld.SlackBuild,v 1.15 2014/07/27 14:51:41 gsotirov Exp $
+# $Id: meld.SlackBuild,v 1.16 2016/07/18 19:26:12 gsotirov Exp $
 #
 
 . ../../slack-package.conf
 
 NAME=meld
-VERSION=1.8.6
+VERSION=3.16.1
 BUILD=${BUILD:-1}
 ARCH=noarch
 
@@ -51,30 +51,24 @@ mkdir -p $PKG
 
 # Extract the source
 cd $TMP
-tar -xvf $CWD/$NAME-$VERSION.tar.?z* || exit 1
+tar -xvf $CWD/$NAME-$VERSION.tar.?z* || exit 3
 cd $SRC
 fix_source
 
-# Configure & build
-# No actions
+# Build
+python setup.py build || exit 4
 
 # Install
-make \
-  DESTDIR=$PKG \
-  prefix=/usr \
-  libdir=/usr/lib \
-  localstatedir=/var \
-  install || exit 3
+python setup.py install --root=$PKG || exit 3
 
-# Install man page separatelly
-install -d -m 755 $PKG/usr/man/man1
-install -m 644 $SRC/$NAME.1 $PKG/usr/man/man1/$NAME.1
+# Move man page in coorrect location and remove doc
+( cd $PKG/usr; mv share/man .; rm -rf share/doc )
 
 # Prepare
 bin_perms $PKG
 ( cd $PKG; strip_bin; strip_lib )
-gzip_man $PKG
 ( cd $SRC; create_docs $PKG $NAME-$VERSION )
+gzip_man $PKG
 
 mkdir -p $PKG/install
 install -m 644 $CWD/doinst.sh      $PKG/install/doinst.sh
