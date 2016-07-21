@@ -5,12 +5,12 @@
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
 
-. ../slack-package.conf
+. ../../slack-package.conf
 
 NAME=meld
 VERSION=1.4.0
 BUILD=${BUILD:-1}
-ARCH=noarch
+ARCH=${ARCH:-i486}
 
 TMP=${TMP:-/tmp}
 CWD=${CWD:-`pwd`}
@@ -45,7 +45,8 @@ fix_source
 make \
   DESTDIR=$PKG \
   prefix=/usr \
-  libdir=/usr/lib \
+  libdir=/usr/lib${LIBDIRSUFFIX} \
+  docdir=/usr/doc/${NAME}-${VERSION} \
   localstatedir=/var \
   install || exit 3
 
