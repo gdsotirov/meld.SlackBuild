@@ -1,6 +1,4 @@
 bzr >= 2.7.0
-cvs >= 1.11.23
-git >= 2.9.0
-gtksourceview >= 3.18.4
-mercurial >= 3.8.2
-subversion >= 1.9.4
+git >= 2.26.2
+mercurial >= 5.4
+subversion >= 1.13.0
