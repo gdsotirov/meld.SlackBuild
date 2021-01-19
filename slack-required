@@ -7,4 +7,4 @@ patch >= 2.7.6
 pycairo >= 1.19.1
 pygobject3 >= 3.36.1
 pygtk >= 2.24.0
-python3 >= 3.8
+python3 >= 3.9
