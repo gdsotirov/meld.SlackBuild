@@ -1,4 +1,4 @@
 bzr >= 2.7.0
-git >= 2.26.2
-mercurial >= 5.4
-subversion >= 1.13.0
+git >= 2.35.1
+mercurial >= 6.0.1
+subversion >= 1.14.1
