@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Slackware build script for Meld Diff and merge tool
-# Copyright (C) 2005-2020 Georgi D. Sotirov <gdsotirov@gmail.com>
+# Copyright (C) 2005-2022 Georgi D. Sotirov <gdsotirov@gmail.com>
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -31,7 +31,7 @@ TMP=${TMP:-/tmp}
 CWD=${CWD:-`pwd`}
 
 if [ ! -e $TMP ]; then
-  mkdir -p $TMP # location to build the source
+  mkdir --parents $TMP # location to build the source
 fi
 
 SRC=$TMP/${NAME}-${VERSION}
@@ -45,11 +45,11 @@ if [ -e $PKG -a -d $PKG ]; then
   echo "Package creation directory '$PKG' already exists! Please, move it or remove it."
   exit 2
 fi
-mkdir -p $PKG
+mkdir --parents $PKG
 
 # Extract the source
 cd $TMP
-tar -xvf $CWD/${NAME}-${VERSION}.tar.?z* || exit 3
+tar --extract --verbose --file=$CWD/${NAME}-${VERSION}.tar.xz || exit 3
 cd $SRC
 fix_source
 
@@ -60,7 +60,7 @@ python3 setup.py build || exit 4
 python3 setup.py install --root=$PKG || exit 3
 
 # Move man page in coorrect location and remove doc
-( cd $PKG/usr; mv share/man .; rm -rf share/doc )
+( cd $PKG/usr; mv share/man .; rm --recursive share/doc )
 
 # Prepare
 bin_perms $PKG
@@ -68,33 +68,43 @@ bin_perms $PKG
 ( cd $SRC; create_docs $PKG ${NAME}-${VERSION} )
 gzip_man $PKG
 
-mkdir -p $PKG/install
-install -m 644 -p $CWD/doinst.sh      $PKG/install/doinst.sh
-install -m 644 -p $CWD/slack-desc     $PKG/install/slack-desc
-install -m 644 -p $CWD/slack-required $PKG/install/slack-required
-install -m 644 -p $CWD/slack-suggests $PKG/install/slack-suggests
+install --mode 755 --directory $PKG/install
+install --mode 644 --preserve-timestamps \
+        $CWD/doinst.sh      $PKG/install/doinst.sh
+install --mode 644 --preserve-timestamps \
+        $CWD/slack-desc     $PKG/install/slack-desc
+install --mode 644 --preserve-timestamps \
+        $CWD/slack-required $PKG/install/slack-required
+install --mode 644 --preserve-timestamps \
+        $CWD/slack-suggests $PKG/install/slack-suggests
 
 SBDIR=$PKG/usr/src/slackbuilds/${NAME}-${VERSION}
-mkdir -p $SBDIR
-install -m 644 -p $CWD/COPYING            $SBDIR/COPYING
-install -m 644 -p $CWD/README             $SBDIR/README
-install -m 644 -p $CWD/doinst.sh          $SBDIR/doinst.sh
-install -m 644 -p $CWD/slack-desc         $SBDIR/slack-desc
-install -m 644 -p $CWD/slack-required     $SBDIR/slack-required
-install -m 644 -p $CWD/slack-suggests     $SBDIR/slack-suggests
-install -m 644 -p $CWD/${NAME}.SlackBuild $SBDIR/${NAME}.SlackBuild
+install --mode 755 --directory $SBDIR
+install --mode 644 --preserve-timestamps \
+        $CWD/COPYING            $SBDIR/COPYING
+install --mode 644 --preserve-timestamps \
+        $CWD/README             $SBDIR/README
+install --mode 644 --preserve-timestamps \
+        $CWD/doinst.sh          $SBDIR/doinst.sh
+install --mode 644 --preserve-timestamps \
+        $CWD/slack-desc         $SBDIR/slack-desc
+install --mode 644 --preserve-timestamps \
+        $CWD/slack-required     $SBDIR/slack-required
+install --mode 644 --preserve-timestamps \
+        $CWD/slack-suggests     $SBDIR/slack-suggests
+install --mode 644 --preserve-timestamps \
+        $CWD/${NAME}.SlackBuild $SBDIR/${NAME}.SlackBuild
 
 # Pack
 cd $PKG
 PKGNAME=${NAME}-${VERSION}-${ARCH}-${BUILD}${MYIN}
-makepkg -l y -c n -p $PKG_DIR/${PKGNAME}.txz
-cd $PKG_DIR
-md5sum ${PKGNAME}.txz > ${PKGNAME}.txz.md5
-cat $PKG/install/slack-desc > $PKG_DIR/${PKGNAME}.txt
+makepkg --chown n --linkadd y $PKG_DIR/${PKGNAME}.txz
+md5sum $PKG_DIR/${PKGNAME}.txz > $PKG_DIR/${PKGNAME}.txz.md5
+install --mode 644 $PKG/install/slack-desc $PKG_DIR/${PKGNAME}.txt
 
 # Clean up (optionally)
 if [ "$1" == "--cleanup" ]; then
-  rm -rf $SRC
-  rm -rf $PKG
+  rm --recursive $SRC
+  rm --recursive $PKG
 fi
 
